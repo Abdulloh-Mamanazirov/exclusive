@@ -1,16 +1,18 @@
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
+import React from "react";
+import Hero from "./components/Hero";
+import Section from "./components/Section";
 
-const index = () => {
+const index = (): React.ReactElement => {
   return (
-    <div>
-      <HoverCard>
-        <HoverCardTrigger>Hover</HoverCardTrigger>
-        <HoverCardContent>
-          The React Framework – created and maintained by @vercel.
-        </HoverCardContent>
-      </HoverCard>
+    <div className="md:container">
+      <div>
+        <Hero />
+      </div>
+      <div className="my-10">
+        <Section />
+      </div>
     </div>
   );
-}
+};
 
-export default index
+export default index;
