@@ -1,26 +1,16 @@
 import React from "react";
 import { Button } from "../ui/button";
 import { Eye, Heart } from "lucide-react";
-
-declare interface ProductCard {
-  id: string;
-  path: string;
-  title: string;
-  image: string;
-  discount?: number;
-  price: number;
-  old_price?: number;
-}
+import type { ProductCardI } from "@/interfaces";
 
 const Card = ({
   id,
-  path,
   title,
   image,
   discount,
   price,
   old_price,
-}: ProductCard): React.ReactElement => {
+}: ProductCardI): React.ReactElement => {
   return (
     <div className="group min-w-fit">
       <div className="relative overflow-hidden">
@@ -39,17 +29,19 @@ const Card = ({
             <span className="sr-only">See product</span>
           </Button>
         </div>
-        <img
-          src={image}
-          alt="product image"
-          className="w-64 h-64 object-cover shadow rounded-md"
-        />
+        <div className="size-64">
+          <img
+            src={image}
+            alt="product image"
+            className="w-full aspect-square object-cover shadow rounded-md"
+          />
+        </div>
         <button className="absolute bottom-0 text-center text-white bg-black w-full rounded-b-md py-2 translate-y-full group-hover:translate-y-0 transition-all">
           Add to wishlist
         </button>
       </div>
-      <div className="flex flex-col gap-2 mt-2">
-        <p className="font-medium">{title}</p>
+      <div className="flex flex-col gap-2 mt-2 max-w-64">
+        <p className="font-medium max-w-full line-clamp-2">{title}</p>
         <div className="flex items-center gap-7">
           <p className="font-medium text-one">${price}</p>
           {old_price && (
