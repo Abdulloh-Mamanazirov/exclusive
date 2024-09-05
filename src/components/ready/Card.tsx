@@ -24,7 +24,12 @@ const Card = ({
             <Heart className="size-4" />
             <span className="sr-only">Add to Wishlist</span>
           </Button>
-          <Button variant="outline" size="icon" className="rounded-full size-8">
+          <Button
+            data-id={id}
+            variant="outline"
+            size="icon"
+            className="rounded-full size-8"
+          >
             <Eye className="size-4" />
             <span className="sr-only">See product</span>
           </Button>
