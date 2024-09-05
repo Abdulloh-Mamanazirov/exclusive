@@ -11,8 +11,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 declare interface HoverItem {
@@ -42,7 +40,7 @@ const HoverItem = ({ title, path, children = [], isHoverable }: HoverItem) => {
             <ul>
               {children.map((i) => (
                 <li key={i.path}>
-                  <Link to={i.path}>{i.title}</Link>
+                  <Link to={i.path} className="hover:underline">{i.title}</Link>
                 </li>
               ))}
             </ul>
