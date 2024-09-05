@@ -22,7 +22,7 @@ const Card = ({
   old_price,
 }: ProductCard): React.ReactElement => {
   return (
-    <div className="group">
+    <div className="group min-w-fit">
       <div className="relative overflow-hidden">
         {discount && (
           <p className="absolute top-3 left-3 bg-one text-white text-sm px-3 rounded-md">
@@ -53,7 +53,7 @@ const Card = ({
         <div className="flex items-center gap-7">
           <p className="font-medium text-one">${price}</p>
           {old_price && (
-            <p className="font-medium opacity-30 line-through">${price}</p>
+            <p className="font-medium opacity-30 line-through">${old_price}</p>
           )}
         </div>
       </div>
