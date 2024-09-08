@@ -28,26 +28,26 @@ const Navbar = (): React.ReactElement => {
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:container">
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
           <Link
-            to="#"
+            to="/"
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
           >
             <Package2 className="h-6 w-6" />
             <span className="sr-only">Exclusive</span>
           </Link>
           <Link
-            to="#"
+            to="/"
             className="text-foreground transition-colors hover:text-foreground"
           >
             Home
           </Link>
           <Link
-            to="#"
+            to="/"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
             Contact
           </Link>
           <Link
-            to="#"
+            to="/"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
             About
@@ -114,14 +114,18 @@ const Navbar = (): React.ReactElement => {
               />
             </div>
           </form>
-          <Button variant="secondary" size="icon" className="rounded-full">
-            <Heart className="h-5 w-5" />
-            <span className="sr-only">Open Wishlist page</span>
-          </Button>
-          <Button variant="secondary" size="icon" className="rounded-full">
-            <ShoppingCart className="h-5 w-5" />
-            <span className="sr-only">Open Cart page</span>
-          </Button>
+          <Link to={"/wishlist"}>
+            <Button variant="secondary" size="icon" className="rounded-full">
+              <Heart className="h-5 w-5" />
+              <span className="sr-only">Open Wishlist page</span>
+            </Button>
+          </Link>
+          <Link to={"/cart"}>
+            <Button variant="secondary" size="icon" className="rounded-full">
+              <ShoppingCart className="h-5 w-5" />
+              <span className="sr-only">Open Cart page</span>
+            </Button>
+          </Link>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full">
@@ -132,8 +136,12 @@ const Navbar = (): React.ReactElement => {
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Wishlist</DropdownMenuItem>
-              <DropdownMenuItem>Cart</DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to={"/wishlist"}>Wishlist</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to={"/cart"}>Cart</Link>
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
               {isLoggedIn ? (
                 <DropdownMenuItem>Log out</DropdownMenuItem>
