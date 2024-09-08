@@ -12,7 +12,7 @@ a {
 
 
 .footer {
-    background-color: #004658;
+    background-color: #002558;
     color: #fff;
 }
 .footer-wave-svg {
@@ -89,7 +89,7 @@ a {
     margin-right: 0;
 }
 .footer-call-to-action-button {
-    background-color: #027b9a;
+    background-color: #02519a;
     border-radius: 21px;
     color: #fffff2;
     display: inline-block;
@@ -151,7 +151,7 @@ a {
 }
 
 .footer-social-amoeba-path {
-    fill: #027b9a;
+    fill: #02519a;
 }
 
 .footer-social-link.linkedin {
@@ -212,7 +212,7 @@ a {
 }
 
 .footer-copyright {
-    background-color: #027b9a;
+    background-color: #02519a;
     color: #fff;
     padding: 15px 30px;
   text-align: center;
