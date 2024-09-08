@@ -40,7 +40,9 @@ const HoverItem = ({ title, path, children = [], isHoverable }: HoverItem) => {
             <ul>
               {children.map((i) => (
                 <li key={i.path}>
-                  <Link to={i.path} className="hover:underline">{i.title}</Link>
+                  <Link to={i.path} className="hover:underline">
+                    {i.title}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -112,28 +114,28 @@ const Hero = (): React.ReactElement => {
           <CarouselContent>
             <CarouselItem>
               <img
-                src="/src/assets/hero-banner.png"
+                src="/assets/hero-banner.png"
                 alt="banner image"
                 className="w-full h-80 object-cover"
               />
             </CarouselItem>
             <CarouselItem>
               <img
-                src="/src/assets/shapes-dark.png"
+                src="/assets/shapes-dark.png"
                 alt="banner image"
                 className="w-full h-80 object-cover"
               />
             </CarouselItem>
             <CarouselItem>
               <img
-                src="/src/assets/shapes-light.png"
+                src="/assets/shapes-light.png"
                 alt="banner image"
                 className="w-full h-80 object-cover"
               />
             </CarouselItem>
             <CarouselItem>
               <img
-                src="/src/assets/win-11.jpg"
+                src="/assets/win-11.jpg"
                 alt="banner image"
                 className="w-full h-80 object-cover"
               />
