@@ -4,7 +4,7 @@ import ProductsSection from "./components/ProductsSection";
 import CategoriesSection from "./components/CategoriesSection";
 import FeaturedGrid from "./components/FeaturedGrid";
 
-const todaysProducts = [
+export const todaysProducts = [
   {
     id: "1",
     title: "Pro white PS 5 controller",
@@ -57,7 +57,7 @@ const todaysProducts = [
   },
 ];
 
-const thisMonthsProducts = [
+export const thisMonthsProducts = [
   {
     id: "1",
     title: "Pro white PS 5 controller",
@@ -130,7 +130,7 @@ const thisMonthsProducts = [
   },
 ];
 
-const categories = [
+export const categories = [
   {
     id: "1",
     title: "White PS 5 controller",
@@ -203,7 +203,7 @@ const categories = [
   },
 ];
 
-const featuredProducts = [
+export const featuredProducts = [
   {
     id: "1",
     image:
