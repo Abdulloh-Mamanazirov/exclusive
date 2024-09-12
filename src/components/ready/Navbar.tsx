@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import {
   Menu,
@@ -21,8 +21,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Input } from "@/components/ui/input";
 
 const Navbar = (): React.ReactElement => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
   return (
     <div>
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:container">
@@ -41,13 +39,13 @@ const Navbar = (): React.ReactElement => {
             Home
           </Link>
           <Link
-            to="/"
+            to="/contact"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
             Contact
           </Link>
           <Link
-            to="/"
+            to="/about"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
             About
@@ -67,38 +65,38 @@ const Navbar = (): React.ReactElement => {
           <SheetContent side="left">
             <nav className="grid gap-6 text-lg font-medium">
               <Link
-                to="#"
+                to="/"
                 className="flex items-center gap-2 text-lg font-semibold"
               >
                 <Package2 className="h-6 w-6" />
-                <span className="sr-only">Acme Inc</span>
+                <span className="sr-only">Exclusive</span>
               </Link>
-              <Link to="#" className="hover:text-foreground">
-                Dashboard
-              </Link>
-              <Link
-                to="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Orders
+              <Link to="/" className="hover:text-foreground">
+                Home
               </Link>
               <Link
-                to="#"
+                to="/contact"
                 className="text-muted-foreground hover:text-foreground"
               >
-                Products
+                Contact
               </Link>
               <Link
-                to="#"
+                to="/about"
                 className="text-muted-foreground hover:text-foreground"
               >
-                Customers
+                About
               </Link>
               <Link
-                to="#"
+                to="/wishlist"
                 className="text-muted-foreground hover:text-foreground"
               >
-                Analytics
+                Wishlist
+              </Link>
+              <Link
+                to="/cart"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                Cart
               </Link>
             </nav>
           </SheetContent>
@@ -143,11 +141,6 @@ const Navbar = (): React.ReactElement => {
                 <Link to={"/cart"}>Cart</Link>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              {isLoggedIn ? (
-                <DropdownMenuItem>Log out</DropdownMenuItem>
-              ) : (
-                <DropdownMenuItem>Log in / Sign up</DropdownMenuItem>
-              )}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
