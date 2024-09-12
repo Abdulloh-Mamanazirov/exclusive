@@ -7,6 +7,7 @@ import {
   MailIcon,
   Send,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const index = (): React.ReactElement => {
   return (
@@ -26,19 +27,19 @@ const index = (): React.ReactElement => {
         <div className="footer-content">
           <div className="footer-content-column">
             <div className="footer-logo">
-              <a className="footer-logo-link" href="#">
+              <Link className="footer-logo-link" to="/">
                 <span className="hidden-link-text">LOGO</span>
                 <h1>LOGO</h1>
-              </a>
+              </Link>
             </div>
             <div className="footer-menu">
               <h2 className="footer-menu-name"> Profile</h2>
               <ul id="menu-get-started" className="footer-menu-list">
                 <li className="menu-item menu-item-type-post_type menu-item-object-product">
-                  <a href="#">Liked</a>
+                  <Link to="/cart">Cart</Link>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-product">
-                  <a href="#">Wishlist</a>
+                  <Link to="/wishlist">Wishlist</Link>
                 </li>
               </ul>
             </div>
@@ -48,16 +49,13 @@ const index = (): React.ReactElement => {
               <h2 className="footer-menu-name"> Company</h2>
               <ul id="menu-company" className="footer-menu-list">
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Contact</a>
+                  <Link to="/contact">Contact</Link>
                 </li>
                 <li className="menu-item menu-item-type-taxonomy menu-item-object-category">
-                  <a href="#">About</a>
-                </li>
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Products</a>
+                  <Link to="/about">About</Link>
                 </li>
               </ul>
             </div>
