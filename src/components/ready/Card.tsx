@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../ui/button";
 import { Eye, Heart } from "lucide-react";
 import type { ProductCardI } from "@/interfaces";
+import { Link } from "react-router-dom";
 
 const Card = ({
   id,
@@ -24,15 +25,16 @@ const Card = ({
             <Heart className="size-4" />
             <span className="sr-only">Add to Wishlist</span>
           </Button>
-          <Button
-            data-id={id}
-            variant="outline"
-            size="icon"
-            className="rounded-full size-8"
-          >
-            <Eye className="size-4" />
-            <span className="sr-only">See product</span>
-          </Button>
+          <Link to={"/product/" + id}>
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full size-8"
+            >
+              <Eye className="size-4" />
+              <span className="sr-only">See product</span>
+            </Button>
+          </Link>
         </div>
         <div className="size-64">
           <img
